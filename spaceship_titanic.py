@@ -13,24 +13,7 @@ import xgboost as xgb
 import numpy as np
 import pandas as pd
 import xgboost as xgb
-import sys
-import os
 
-myDir = os.getcwd()
-sys.path.append(myDir)
-
-from pathlib import Path
-path = Path(myDir)
-a=str(path.parent.absolute())
-
-sys.path.append(a) 
-
-
-
-# if cryosleep = True, spending = 0
-# vip generally > total spending
-# if age < 12, spending = 0
-# higher the age, higher the spending
 
 def main():
     train_df = pd.read_csv("spaceship-titanic/data/train.csv")
